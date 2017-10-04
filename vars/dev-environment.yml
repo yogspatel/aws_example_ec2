@@ -1,6 +1,6 @@
 ---
 # set these parameters to control the region, keypair, and AMI that are launched
-ec2_region: us-east-2c
+ec2_region: us-east-2
 instances_keypair: AWS_Lab_KeyPair 
 image_id: ami-cfdafaaa
 
@@ -35,7 +35,6 @@ ec2_instances:
   - instance_type: t2.micro
     image: "{{ image_id }}"
     assign_public_ip: true
-    vpc_subnet_id: vpc-a995e9c0
     keypair: "{{instances_keypair}}"
     group: ['launch-wizard-2']
     instance_tags: 
