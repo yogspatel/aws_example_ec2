@@ -35,6 +35,7 @@ ec2_instances:
   - instance_type: t2.micro
     image: "{{ image_id }}"
     assign_public_ip: true
+    vpc_subnet_id: subnet-d1b4689c
     keypair: "{{instances_keypair}}"
     group: ['launch-wizard-2']
     instance_tags: 
